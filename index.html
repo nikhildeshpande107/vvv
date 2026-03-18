@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Dashboard</title>
+</head>
+<body>
+
+<h2>Add User</h2>
+<form id="userForm">
+    <input type="text" id="name" placeholder="Name" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <button type="submit">Add User</button>
+    
+</form>
+
+<h2>Users List</h2>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Actions</th>
+    <td>
+    <button onclick="editUser('${user._id}', '${user.name}')">Edit</button>
+    <button onclick="deleteUser('${user._id}')">Delete</button>
+</td>
+        </tr>
+    </thead>
+    <tbody id="userTable"></tbody>
+</table>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
